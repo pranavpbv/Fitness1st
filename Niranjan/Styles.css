@@ -1,0 +1,68 @@
+body{
+    background-color: peachpuff !important;
+}
+#search{
+    width: 75%;
+    margin-left: 5%;
+    border-color: grey;
+    background-color: #ffe3b9;
+}
+
+
+#button{
+    border-color: brown;
+    font-size: 15px; margin-left: 1%;
+    background-color: orange;
+    border-radius: 9px;
+}
+#total{
+    margin-left: 6%;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+@media only screen and (max-width: 450px) {
+    #search{
+    width: 60%;}
+    #button{
+        font-size: 13px
+    }
+    #total{
+        margin-left: 2%;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    #search{
+    width: 80%;}
+}
+table{
+    width: 90%;margin-left: 5%;
+}
+table,th,td{
+    border-collapse: collapse;
+    text-align: center;
+}
+tr{
+    border-bottom: 1px solid #995439;
+}
+tr:nth-child(even) {
+background-color: #ffe3b9;
+}
+.context{
+    border-radius: 6px;
+    border-color: orange;
+    background-color: orange;
+    font-size: 11px;
+    margin-top: 2px;
+}
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+h1{
+    font-family: lato,sans-serif;
+    padding-left: 6%;
+}
+.AddSearch{
+    border-radius: 6px;
+    border-color: peachpuff;
+
+}

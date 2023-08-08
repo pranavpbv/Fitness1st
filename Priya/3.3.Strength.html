@@ -1,0 +1,279 @@
+<html>
+    <head>
+        <title>Strength Training</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+    h2{ text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 250%; }
+    p{text-align: justify;}
+    body{ padding: 3%; padding-top: 0%; font-size: 110%;background-color: peachpuff;}
+    #inten{box-shadow: 3px 3px 2px brown;
+        background-color: orange;
+	border-radius: .75rem 25px 5% 3em;
+	padding: 0.8rem;
+    font-size: 120%;
+    }
+    h4{
+        box-shadow: 1px 1px 1px lightcoral;
+        background-color: #ffe3b9;
+        border-radius: .75rem 25px 5% 3em;
+        padding: 0.8rem;
+    }
+    .btns{
+    border-color: brown;
+    font-size: 15px; margin-left: 1%;
+    background-color: orange;
+    border-radius: 9px;
+    padding:1%;
+    }
+    </style>
+    <script>
+        function begStrength()
+        {
+            var divTagBeg=document.getElementById("strBeg");divTagBeg.style.display="block";
+            var divTagInt=document.getElementById("strInt");divTagInt.style.display="none";
+            var divTagAdv=document.getElementById("strAdv");divTagAdv.style.display="none";
+        }
+        function intStrength()
+        {
+            var divTagBeg=document.getElementById("strBeg");divTagBeg.style.display="none";
+            var divTagInt=document.getElementById("strInt");divTagInt.style.display="block";
+            var divTagAdv=document.getElementById("strAdv");divTagAdv.style.display="none";
+        }
+        function advStr()
+        {
+            var divTagBeg=document.getElementById("strBeg");divTagBeg.style.display="none";
+            var divTagInt=document.getElementById("strInt");divTagInt.style.display="none";
+            var divTagAdv=document.getElementById("strAdv");divTagAdv.style.display="block";
+        }
+    </script>
+    <body>
+        <h2><i>STRENGTH TRAINING</i></h2>
+        <p id="inten"><b>Intensity</b></p>
+        <form style="padding: 2%;">
+        <input type="radio" name="Intensity" value="Beginner" onclick="begStrength()">Beginner<br>
+        <input type="radio" name="Intensity" value="Intermediate" onclick="intStrength()">Intermediate<br>
+        <input type="radio" name="Intensity" value="Advanced" onclick="advStr()">Advanced
+        </form>
+        <div id="strBeg" style="display:none;">
+            <h4>Following are the Strength Training exercises recommended for a beginner</h4>
+                <ol>
+                    <li id="b1">Basic crunches</li>
+                    <li id="b2">Lunges</li>
+                </ol>
+            <h4>Click on any exercise to know more about it.</h4>
+        </div>
+        <div id="strInt" style="display:none;">
+            <h4>Following are the Strength Training exercises recommended for intermediate level</h4>
+            <ol>
+                <li id="i1">Squats</li>
+                <li id="i2">Pull-ups</li>
+            </ol>
+            <h4>Click on any exercise to know more about it.</h4>
+        </div>
+        <div id="strAdv" style="display:none;">
+            <h4>Following are the Strength Training exercises recommended for advanced level</h4>
+            <ol>
+                <li id="a1">Tricep dips</li>
+                <li id="a2">Push-ups</li>
+            </ol>
+            <h4>Click on any exercise to know more about it.</h4>
+        </div>
+        <br>
+        <div id="b1DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>BASIC CRUNCHES</b><br><br>
+                <img src="crunches.jpg" width="400" height="260"</p>
+            <p>Steps to follow:</p>
+            <ol>
+            <li>Lie on your back with your feet flat on the floor, hip-width apart. Bend your knees and place your fingertips behind your ears with your elbows wide open. Take a deep breath in.</li>
+            <li>Breathe out, squeeze your abs and lift your head, neck and shoulders up toward the ceiling.</li>
+            <li>Breathe in and return to the starting position.</li>
+            <li>Repeat 10 to 12 times for 5 rounds.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/Xyd_fa5zoEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing basic crunches:</p>
+            <ol>
+                <li>Helps in building a strong core</li>
+                <li>Strengthens the abdominal muscles</li>
+                <li>Improves your balance and posture.</li>
+            </ol>
+        </div>
+        
+        <div id="b2DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>LUNGES</b><br><br>
+                <img src="lunges.jpg" width="400" height="260"</p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>Start in a standing position with your feet hip-width apart.</li>
+                <li>Step forward longer than a walking stride so one leg is ahead of your torso and the other is behind. Your foot should land flat and remain flat while it’s on the ground. Your rear heel will rise off of the ground.</li>
+                <li>Bend your knees to approximately 90 degrees as you lower yourself. Remember to keep your trunk upright and core engaged.</li>
+                <li>Then, forcefully push off from your front leg to return to the starting position.</li>
+            
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/3XDriUn0udo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing lunges:</p>
+            <ol>
+                <li>Lunges work several muscle groups of the lower body at the same time.</li>
+                <li>Improve asymmetries in strength.</li>
+                <li>Lunges challenge and improve your balance and stability in unilateral movements.</li>
+            </ol>
+        </div>
+        
+        <div id="i1DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>SQUATS</b><br><br>
+                <img src="squats.jpg" width="400" height="260"</p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>Stand with your feet shoulder-width apart or slightly wider. Extend your hands straight out in front of you to help keep your balance. You can also hold your hands at chest level or place them behind your head.</li>
+                <li>Bend at your knees and hips, sticking your butt out like you're sitting into an imaginary chair. Keep your chest lifted and your spine neutral, and protect your lower back by not rounding your spine.</li>
+                <li>Keep your head and chest lifted to prevent your spine from rounding. Lower your hips so your knees are over your ankles. Make sure to keep your weight back into your heels to avoid too much pressure on the knees.</li>
+                <li>Keep your body tight, and push through your heels, focusing on using your glutes to bring yourself back to the starting position in order to reduce strain on your lower back. This counts as one rep.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/aclHkVaku9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing squats:</p>
+            <ol>
+                <li>Strengthens your lower-body muscles</li>
+                <li>Lower your chances of injuring your knees and ankles</li>
+                <li>Boosts bone mineral density.</li>
+            </ol>
+        </div>
+        
+        <div id="i2DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>PULL UPS</b><br><br>
+                <img src="pull ups.jpg" width="400" height="260"</p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>The pullup bar should be at a height that requires you to jump up to grab it; your feet should hang free. Stand below the bar with your feet shoulder width apart.</li>
+                <li>Jump up and grip the bar with an overhand grip about shoulder width apart. </li>
+                <li>Fully extend your arms so you are in a dead hang. Bend your knees and cross your ankles for a balanced position.</li>
+                <li>Take a breath at the bottom.</li>
+                <li>Exhale while pulling yourself up so your chin is level with the bar. Pause at the top.</li>
+                <li>Lower yourself (inhaling as you go down) until your elbows are straight.</li>
+                <li>Repeat the movement without touching the floor.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/XeErfmGSwfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing pull ups:</p>
+            <ol>
+                <li>Improves grip strength.</li>
+                <li>Reduces anxiety levels.</li>
+                <li>Improves self esteem.</li>
+            </ol>
+        </div> 
+
+        <div id="a1DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>TRICEP DIPS</b><br><br>
+                <img src="tricepdips.jpg" width="600" height="200"></p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>Use an overhand grip to hold a chair or table, with straight arms. Contract your core and take your full body weight onto your arms, bending your knees so your feet are off the ground.</li>
+                <li>Bend your elbows and lower your body slowly. Begin by lowering for two seconds or as low as you can go without great discomfort in your shoulders.</li>
+                <li>Pause in the low position for a second or two.</li>
+                <li>Press back up to the upright position.</li>
+                <li>End by straightening your legs to stand up.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/6kALZikXxLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing tricep dips:</p>
+            <ol>
+                <li>Improves core strength.</li>
+                <li>Improves your body balance.</li>
+                <li>Boosts metabolism.</li>
+            </ol>
+        </div>
+        
+        <div id="a2DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>PUSH UPS</b><br><br>
+                <img src="pushups.jpg"></p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>Get on the floor on all fours, positioning your hands slightly wider than your shoulders. Don't lock out the elbows; keep them slightly bent.</li>
+                <li>Extend your legs back so you are balanced on your hands and toes, your feet hip-width apart.</li>
+                <li>Contract your abs and tighten your core by pulling your belly button toward your spine. </li>
+                <li>Inhale as you slowly bend your elbows and lower yourself to the floor, until your elbows are at a 90-degree angle.</li>
+                <li>Exhale while contracting your chest muscles and pushing back up through your hands, returning to the start position. </li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/90AABclAL1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing push ups:</p>
+            <ol>
+                <li>Builds upper body strength.</li>
+                <li>Strengthens lower back.</li>
+                <li>Enhances cardiovascular system.</li>
+            </ol>
+        </div> 
+
+
+        <form name="end">
+        <p style="text-align: right;"><a href="3.0.Exercises.html"><input type="button" class="btns" value="Back"></a><br></p>
+        </form>
+        <script>
+            document.getElementById("b1").addEventListener("click",b1fun);
+            document.getElementById("b2").addEventListener("click",b2fun);
+            document.getElementById("i1").addEventListener("click",i1fun);
+            document.getElementById("i2").addEventListener("click",i2fun);
+            document.getElementById("a1").addEventListener("click",a1fun);
+            document.getElementById("a2").addEventListener("click",a2fun);
+            
+            function b1fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="block";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none";
+                
+            }
+            function b2fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="block";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none";
+                
+            }
+            function i1fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="block";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none"; 
+            }
+            function i2fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="block";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none";
+            }
+            function a1fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="block";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none";
+            }
+            function a2fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="block";
+            }
+        </script>
+    </body>
+</html>

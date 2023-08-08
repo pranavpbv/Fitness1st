@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Components</title>
+</head>
+
+<link rel="stylesheet" href="navstyle.css">
+<link rel="stylesheet" href="Styles.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<body>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  window.onscroll = function() {myFunction1()};
+  var myTopnav = document.getElementById("myTopnav");
+  var sticky = myTopnav.offsetTop;
+  
+  function myFunction1() {
+    if (window.pageYOffset >= sticky) {
+      myTopnav.classList.add("sticky")
+    } else {
+      myTopnav.classList.remove("sticky");
+    }
+  }
+</script>
+  <h1 style="text-align: center;font-style: oblique;font-family: 'Franklin Gothic Medium';">Fitness1st</h1>
+  <div class="topnav" id="myTopnav">
+  <a href="../Pranav/review2_homepage.html">Home</a>
+  <a href="../Niranjan/FDCMP.html" class="active">Food</a>
+  <a href="../Priya/1.Page1.html">Workout</a>
+  <div class="dropdown">
+      <button class="dropbtn">Fitness Calculator 
+      <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+          <a href="../Bhuvi/bmi.html">BMI Calculator</a>
+          <a href="../Bhuvi/bmr.html">Steps to Calories</a>
+          <a href="../Bhuvi/cal.html">Body Metabolism Calculator</a>
+          <a href='../Niranjan/Calories.php'>Calorie Calculator</a>
+      </div>
+  </div> 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  <a href="../Vignesh/myinfo.php">Profile</a>
+  <a href="../Pranav/Forum/login.php">Forum</a>
+  <a href="../Vignesh/login.php">Login</a>
+  </div>
+  <br><br>
+    <!-- Carousel -->
+
+    <div id="carouselExampleIndicators" class="carousel slide w-75 mx-auto" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="Upma.jpg" class="d-block w-100 " >
+            <div class="carousel-caption d-block">
+                <h5>Upma</h5>
+                <p>Good source of protein and healthy carbs.</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Brown rice.jpg" class="d-block w-100 "  >
+            <div class="carousel-caption d-block">
+                <h5>Brown Rice</h5>
+                <p> Rich source of dietary fiber</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Ragi Roti.jpg" class="d-block w-100 " >
+            <div class="carousel-caption d-block">
+                <h5>Ragi Roti</h5>
+                <p>High on Protein</p>
+              </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <br><br>
+
+        <!-- Dishes in Cuisines -->
+        <!-- American -->
+
+      <h1 class="display-4"><u> American</u></h1>
+      <div class="container">
+      <div class="row" style="padding-top: 1%;">
+        <div class="col-sm-6">
+          <!-- Card 1 -->
+          <div class="card">       
+            <img src="Pie.jpg" class="card-img-top" alt="Picture of Apple Pie" >
+            <div class="card-body">
+              <h5 class="card-title">Apple Pie</h5>
+              <p class="card-text">The saying is "American as apple pie" for a reason: this sweet treat is a national institution. They are mainly made up of Apples, flour, sugar, milk, cinnamon, butter and salt</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 11g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 34g</li>
+              <li class="list-group-item"><b> Proteins </b>: 1.9g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 237 kcal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6" >
+          <!-- Card 2 -->
+          <div class="card">    
+            <img src="Ham.jpg" class="card-img-top" alt="Picture of Hamburger">
+            <div class="card-body">
+              <h5 class="card-title">Hamburgers</h5>
+              <p class="card-text">A hamburger (or burger for short) is a food consisting of fillings —usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon, or chilis; condiments such as ketchup, mustard, mayonnaise, relish, or a "special sauce" </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 14g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 24g</li>
+              <li class="list-group-item"><b> Proteins </b>: 17g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 295 kcal</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+        <div class="col-sm-6">
+          <!-- Card 3 -->
+          <div class="card">      
+            <img src="Taco.jpg" class="card-img-top" alt="Tacos">
+            <div class="card-body">
+              <h5 class="card-title">Tacos</h5>
+              <p class="card-text">A taco is a traditional Mexican dish consisting of a small hand-sized corn or wheat tortilla topped with a filling. The tortilla is then folded around the filling and eaten by hand.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 13g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 20g</li>
+              <li class="list-group-item"><b> Proteins </b>: 9g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 226 kcal</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-6" >
+          <!-- Card 4 -->
+          <div class="card">
+            <img src="Lasagna.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Lasagna</h5>
+              <p class="card-text">Lasagne are a type of pasta, possibly one of the oldest types, made of very wide, flat sheets.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 5g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 15g</li>
+              <li class="list-group-item"><b> Proteins </b>: 7g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 135 kcal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      <br><br>
+
+       <!-- Indian -->
+
+      <h1 class="display-4"><u> Indian</u></h1>
+      <div class="container">
+      <div class="row" style="padding-top: 1%;">
+        <div class="col-sm-6">
+          <!-- Card 1 -->
+          <div class="card">   
+            <img src="Chilla.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chilla</h5>
+              <p class="card-text">Chillas are usually prepared with chickpea flour (besan) but can also be made out of sprouted mung beans.Besides being a rich source of plant-based protein, mung beans contain a variety of vitamins, minerals, and antioxidants.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 7.9g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 30g</li>
+              <li class="list-group-item"><b> Proteins </b>: 10g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 236 kcal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6" >
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="Poha.jpg" class="card-img-top" alt="Poha">
+            <div class="card-body">
+              <h5 class="card-title">Poha
+              </h5>
+              <p class="card-text">Poha is a wholesome meal. It is a good source of carbohydrates, packed with iron, rich in fibre, a good source of antioxidants and essential vitamins and is gluten free.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 2.87g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 18.8g</li>
+              <li class="list-group-item"><b> Proteins </b>: 2.34g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 110 kcal</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+        <div class="col-sm-6">
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="Dal.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Dal</h5>
+              <p class="card-text">Dal can be made with a variety of lentils, such as toor daal, masoor daal, and chana daal. They are one of the biggest source of protein.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 4.2g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 34g</li>
+              <li class="list-group-item"><b> Proteins </b>: 14g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 220 kcal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6" >
+          <!-- Card 4 -->
+          <div class="card">
+            <img src="Channa masaal.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Chana masala</h5>
+              <p class="card-text">Chana masala is an Indian dish primarily made of chickpeas simmered in spiced tomato sauce.Chickpeas are high in protein.They provide substantial amounts of eight of the nine essential amino acids, which are the building blocks of protein.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 6g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 32g</li>
+              <li class="list-group-item"><b> Proteins </b>: 9g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 240 kcal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <br><br>
+
+      <!-- Chinese -->
+
+       <h1 class="display-4"><u> Chinese</u></h1>
+       <div class="container">
+       <div class="row" style="padding-top: 1%;">
+         <div class="col-sm-6">
+           <!-- Card 1 -->
+           <div class="card">   
+             <img src="Dumpling.jpg" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">Vegetable Dumplings</h5>
+               <p class="card-text">Dumplings are usually prepared of all-purpose flour, a little salt, and hot water..Besides being a rich source of plant-based protein, mung beans contain a variety of vitamins, minerals, and antioxidants.</p>
+             </div>
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><b> Fat </b>: 2.4g</li>
+               <li class="list-group-item"><b>Carbohydrate </b>: 7.7g</li>
+               <li class="list-group-item"><b> Proteins </b>: 3.6g</li>
+               <li class="list-group-item"><b>Total Calories</b> : 67 kcal</li>
+             </ul>
+           </div>
+         </div>
+         <div class="col-sm-6" >
+           <!-- Card 2 -->
+           <div class="card">
+             <img src="StirFry.jpg" class="card-img-top" alt="Poha">
+             <div class="card-body">
+               <h5 class="card-title">Stir-Fries</h5>
+               <p class="card-text">Made of Shrimp,broccoli and Chicken with snow peas. Pairing a lean protein with a fiber-rich vegetable sets the stage for a nutritious and filling meal </p>
+             </div>
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><b> Fat </b>: 11g</li>
+               <li class="list-group-item"><b>Carbohydrate </b>: 15g</li>
+               <li class="list-group-item"><b> Proteins </b>: 6g</li>
+               <li class="list-group-item"><b>Total Calories</b> : 171 kcal</li>
+             </ul>
+           </div>
+         </div>
+         </div>
+         <div class="row" style="padding-top: 1%;">
+         <div class="col-sm-6">
+           <!-- Card 3 -->
+           <div class="card">
+             <img src="KungPao.jpg" class="card-img-top">
+             <div class="card-body">
+               <h5 class="card-title">Kung Pao Chicken</h5>
+               <p class="card-text">Kung Pao chicken, also transcribed Gong Bao or Kung Po, is a spicy, stir-fried Chinese dish made with cubes of chicken, peanuts, vegetables, and chili peppers.</p>
+             </div>
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><b> Fat </b>: 7g</li>
+               <li class="list-group-item"><b>Carbohydrate </b>: 7g</li>
+               <li class="list-group-item"><b> Proteins </b>: 10g</li>
+               <li class="list-group-item"><b>Total Calories</b> : 129 kcal</li>
+             </ul>
+           </div>
+         </div>
+         <div class="col-sm-6" >
+           <!-- Card 4 -->
+           <div class="card">
+             <img src="Buddha.jpg" class="card-img-top">
+             <div class="card-body">
+               <h5 class="card-title">Buddha's Delight</h5>
+               <p class="card-text">This dish is made with an assortment of vegetables, like mushrooms, cabbage, water chestnuts, and carrots. They deliver fiber and a variety of vitamins. There’s also protein-rich tofu, which can help you stay full and eat less. </p>
+             </div>
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><b> Fat </b>: 12g</li>
+               <li class="list-group-item"><b>Carbohydrate </b>: 17g</li>
+               <li class="list-group-item"><b> Proteins </b>: 9g</li>
+               <li class="list-group-item"><b>Total Calories</b> : 199 kcal</li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       </div>
+       <br><br>
+
+
+      <!-- Thai -->
+
+      <h1 class="display-4"><u> Thai</u></h1>
+      <div class="container">
+      <div class="row" style="padding-top: 1%;">
+        <div class="col-sm-6">
+          <!-- Card 1 -->
+          <div class="card">   
+            <img src="SomTam.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Som Tam</h5>
+              <p class="card-text">Som Tam is a popular Thai salad featuring green papaya and a spicy chile pepper dressing </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 0.2g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 12.6g</li>
+              <li class="list-group-item"><b> Proteins </b>: 1.8g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 97 cal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6" >
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="YumTalay.jpg" class="card-img-top" alt="Poha">
+            <div class="card-body">
+              <h5 class="card-title">Yum Talay</h5>
+              <p class="card-text">Yum means mixture of different flavors, often associated with a salad, talay means seafood. It can be made with any combination of seafood you have on hand, and for greens we like it served on a bed of iceberg lettuce along with seasonal vegetables.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 2.6g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 8.7g</li>
+              <li class="list-group-item"><b> Proteins </b>: 32g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 191 kcal</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+        <div class="col-sm-6">
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="KaengLiang.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Kaeng Liang</h5>
+              <p class="card-text">Kaeng Liang or Gaeng Liang is a peppery, light, yummy vegetable soup 
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 0.7g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 23g</li>
+              <li class="list-group-item"><b> Proteins </b>: 5.9g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 111 kcal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6" >
+          <!-- Card 4 -->
+          <div class="card">
+            <img src="PadPak.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Pad Pak</h5>
+              <p class="card-text">Pad Pak is a dish consisting of stir fry vegetables. It uses a Chinese cooking technique that usually involves veggies, meats and fish.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b> Fat </b>: 16.4g</li>
+              <li class="list-group-item"><b>Carbohydrate </b>: 62.2g</li>
+              <li class="list-group-item"><b> Proteins </b>: 5.7g</li>
+              <li class="list-group-item"><b>Total Calories</b> : 413 kcal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      <br><br>
+
+            <!-- Mexican -->
+
+            <h1 class="display-4"><u> Mexican</u></h1>
+            <div class="container">
+            <div class="row" style="padding-top: 1%;">
+              <div class="col-sm-6">
+                <!-- Card 1 -->
+                <div class="card">   
+                  <img src="Enchiladas.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Vegetable enchiladas</h5>
+                    <p class="card-text">Amazing vegetarian enchiladas stuffed with black beans, broccoli, bell pepper and spinach, topped with homemade red sauce. </p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b> Fat </b>: 9.3g</li>
+                    <li class="list-group-item"><b>Carbohydrate </b>: 23g</li>
+                    <li class="list-group-item"><b> Proteins </b>: 10g</li>
+                    <li class="list-group-item"><b>Total Calories</b> : 209 kcal</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6" >
+                <!-- Card 2 -->
+                <div class="card">
+                  <img src="Burritos.jpg" class="card-img-top" alt="Poha">
+                  <div class="card-body">
+                    <h5 class="card-title">Burritos</h5>
+                    <p class="card-text">Burritos are generally made of a flour tortilla, a meat, possibly beans and/or rice, cheese and toppings. Choosing the leanest and most nutrient-dense ingredients and preparing them without adding extra fat ensures that burritos can be a healthy part of any meal plan</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b> Fat </b>: 13.9g</li>
+                    <li class="list-group-item"><b>Carbohydrate </b>: 45.2g</li>
+                    <li class="list-group-item"><b> Proteins </b>: 10.1g</li>
+                    <li class="list-group-item"><b>Total Calories</b> : 345 kcal</li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+              <div class="row" style="padding-top: 1%;">
+              <div class="col-sm-6">
+                <!-- Card 3 -->
+                <div class="card">
+                  <img src="mex.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">Mexican Chicken and Wild Rice soup</h5>
+                    <p class="card-text">This vitamin C filled soup is the ideal after-work pick-me-up </p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b> Fat </b>: 5.9g</li>
+                    <li class="list-group-item"><b>Carbohydrate </b>: 33g</li>
+                    <li class="list-group-item"><b> Proteins </b>: 25.7g</li>
+                    <li class="list-group-item"><b>Total Calories</b> : 284 kcal</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6" >
+                <!-- Card 4 -->
+                <div class="card">
+                  <img src="FishTacos.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">Fish Tacos</h5>
+                    <p class="card-text">Fish Tacos is rich in important nutrients. It provides protein and essential omega acids which is important for the brain.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b> Fat </b>: 12g</li>
+                    <li class="list-group-item"><b>Carbohydrate </b>: 18g</li>
+                    <li class="list-group-item"><b> Proteins </b>: 16g</li>
+                    <li class="list-group-item"><b>Total Calories</b> : 244 kcal</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            </div>
+      <br><br>
+  <br><br><br><br>
+  <div class="bottomnav" id="bn">
+    <a href="../Pranav/contactus.html">Contact Us</a>
+    <a href="../Pranav/FAQ.html">FAQ</a>
+</div>
+</body>
+</html>

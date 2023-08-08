@@ -1,0 +1,271 @@
+<html>
+    <head>
+        <title>Cardio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+    h2{ text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 250%; }
+    p{text-align: justify;}
+    body{ padding: 3%; padding-top: 0%; font-size: 110%;background-color: peachpuff;}
+    #inten{box-shadow: 3px 3px 2px brown;
+        background-color: orange;
+	border-radius: .75rem 25px 5% 3em;
+	padding: 0.8rem;
+    font-size: 120%;
+    }
+    h4{
+        box-shadow: 1px 1px 1px lightcoral;
+        background-color: #ffe3b9;
+        border-radius: .75rem 25px 5% 3em;
+        padding: 0.8rem;
+    }
+    .btns{
+    border-color: brown;
+    font-size: 15px; margin-left: 1%;
+    background-color: orange;
+    border-radius: 9px;
+    padding:1%;
+    }
+    </style>
+    <script>
+        function begStrength()
+        {
+            var divTagBeg=document.getElementById("strBeg");divTagBeg.style.display="block";
+            var divTagInt=document.getElementById("strInt");divTagInt.style.display="none";
+            var divTagAdv=document.getElementById("strAdv");divTagAdv.style.display="none";
+        }
+        function intStrength()
+        {
+            var divTagBeg=document.getElementById("strBeg");divTagBeg.style.display="none";
+            var divTagInt=document.getElementById("strInt");divTagInt.style.display="block";
+            var divTagAdv=document.getElementById("strAdv");divTagAdv.style.display="none";
+        }
+        function advStr()
+        {
+            var divTagBeg=document.getElementById("strBeg");divTagBeg.style.display="none";
+            var divTagInt=document.getElementById("strInt");divTagInt.style.display="none";
+            var divTagAdv=document.getElementById("strAdv");divTagAdv.style.display="block";
+        }
+    </script>
+    <body>
+        <h2><i>CARDIO</i></h2>
+        <p id="inten"><b>Intensity</b></p>
+        <form style="padding: 2%;">
+        <input type="radio" name="Intensity" value="Beginner" onclick="begStrength()">Beginner<br>
+        <input type="radio" name="Intensity" value="Intermediate" onclick="intStrength()">Intermediate<br>
+        <input type="radio" name="Intensity" value="Advanced" onclick="advStr()">Advanced
+        </form>
+        <div id="strBeg" style="display:none;">
+            <h4>Following are the Cardio exercises recommended for a beginner</h4>
+                <ol>
+                    <li id="b1">Lateral Shuffles</li>
+                    <li id="b2">Jumping Jacks</li>
+                </ol>
+            <h4>Click on any exercise to know more about it.</h4>
+        </div>
+        <div id="strInt" style="display:none;">
+            <h4>Following are the Cardio exercises recommended for intermediate level</h4>
+            <ol>
+                <li id="i1">Squat to front kick</li>
+                <li id="i2">Trunk rotation</li>
+            </ol>
+            <h4>Click on any exercise to know more about it.</h4>
+        </div>
+        <div id="strAdv" style="display:none;">
+            <h4>Following are the Cardio exercises recommended for advanced level</h4>
+            <ol>
+                <li id="a1">Mountain climbers</li>
+                <li id="a2">Burpees</li>
+            </ol>
+            <h4>Click on any exercise to know more about it.</h4>
+        </div>
+        <br>
+        <div id="b1DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>LATERAL SHUFFLES</b><br><br>
+                <img src="lateralsuffles.png" width="400" height="260"></p>
+            <p>Steps to follow:</p>
+            <ol>
+            <li>Start standing with feet hip distance apart and sink into a deep knee bend. Bring both hands in front of the chest in guard position.</li>
+            <li>Start with right foot moving right and left foot following.  Shuffle right for four right-left steps, then move left for four left-right steps.  Continue shuffling right left for the desired amount of time.</li>
+            <li>Keep your core engaged the whole time and make sure your chest stays lifted. This will help you maintain proper form.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/iBmvPEWt5og" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing Lateral Shuffles:</p>
+            <ol>
+                <li>Improves agility.</li>
+                <li>Boosts metabolism.</li>
+                <li>Increases the ability of an athelete to move quickly in every direction</li>
+            </ol>
+        </div>
+            
+        <div id="b2DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>JUMPING JACKS</b><br><br>
+                <img src="jumping jacks.png" width="400" height="260"</p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>Stand upright with your legs together, arms at your sides.</li>
+                <li>Bend your knees slightly, and jump into the air.</li>
+                <li>As you jump, spread your legs to be about shoulder-width apart. Stretch your arms out and over your head.</li>
+                <li>Jump back to starting position.</li>
+                <li>Repeat.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/nGaXj3kkmrU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing Jumping Jacks:</p>
+            <ol>
+                <li>Increases flexibility.</li>
+                <li>Relieves stress.</li>
+                <li>Strengthens glutes and hamstrings.</li>
+            </ol>
+        </div>
+        
+        <div id="i1DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>SQUAT TO FRONT KICK</b><br><br>
+                <img src="squattofrontkick.jpg" width="400" height="260"</p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>Stand with the feet hip-width apart and arms at the sides.</li>
+                <li>Bend at the knees to squat down.</li>
+                <li>Return to standing and extend one leg to perform a front kick.</li>
+                <li>Repeat the kick on the other side.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/e7XwyjyOjCY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing Squat to Front Kick:</p>
+            <ol>
+                <li>Improves balance</li>
+                <li>Leads to better agility.</li>
+                <li>Works the core muscles.</li>
+            </ol>
+        </div>
+        
+        <div id="i2DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>TRUNK ROTATION</b><br><br>
+                <img src="trunkrotation.jpg" width="40%" height="40%"></p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>Stand with a heavy object at chest height with elbows to the sides.</li>
+                <li>Twist from the torso, turning to one side, then the other.</li>
+                <li>A person can also hold the arms at shoulder height and twist side to side.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+                <iframe width="480" height="360" src="https://www.youtube.com/embed/g_Pwm7Lyg8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing Trunk Rotation</p>
+            <ol>
+                <li>Works on abdominal muscles.</li>
+                <li>Enhances the cardiovascular system.</li>
+                <li>Flexibility is increased.</li>
+            </ol>
+        </div> 
+
+        <div id="a1DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>MOUNTAIN CLIMBERS</b><br><br>
+                <img src="mountainclimbers.jpg" width="400" height="260"></p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>Start in a pushup position with the right leg extended backward and the left leg near the chest with the toes on the ground.</li>
+                <li>Keeping the hands on the ground and hips level, quickly switch the positions of the legs.</li>
+                <li>Continue to alternate the legs.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/nmwgirgXLYM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing Mountain Climbers:</p>
+            <ol>
+                <li>Builds cardio endurance.</li>
+                <li>Stabilises core.</li>
+                <li>Reduces fat in the abdominal area.</li>
+            </ol>
+        </div>
+        <div id="a2DIV" style="display: none;">
+            <p style="text-align:center; font-size: 120%;"><b>BURPEES</b><br><br>
+                <img src="BURPEES.jpg" width="400" height="260"></p>
+            <p>Steps to follow:</p>
+            <ol>
+                <li>Start with the body in a pushup position.</li>
+                <li>Push off the balls of the feet to bring the knees into the chest and land in a squat.</li>
+                <li>Jump out of the squat, raising the hands in the air before landing softly back into the squat.</li>
+                <li>Place the hands back on the floor underneath the shoulders.</li>
+                <li>Spring the legs back to return to the starting position.</li>
+            </ol>
+            <p style="text-align:center">Video reference:<br><br>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/wS4OsJ4yzx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>Benefits of doing Mountain Climbers:</p>
+            <ol>
+                <li>Improved blooad flow.</li>
+                <li>Stronger heart and lungs.</li>
+                <li>Lower blood pressure.</li>
+            </ol>
+        </div> 
+
+
+        <form name="end">
+        <p style="text-align: right;"><a href="3.0.Exercises.html"><input type="button" class="btns" value="Back"></a><br></p>
+        </form>
+        <script>
+            document.getElementById("b1").addEventListener("click",b1fun);
+            document.getElementById("b2").addEventListener("click",b2fun);
+            document.getElementById("i1").addEventListener("click",i1fun);
+            document.getElementById("i2").addEventListener("click",i2fun);
+            document.getElementById("a1").addEventListener("click",a1fun);
+            document.getElementById("a2").addEventListener("click",a2fun);
+            
+            function b1fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="block";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none";
+                
+            }
+            function b2fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="block";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none";
+                
+            }
+            function i1fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="block";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none"; 
+            }
+            function i2fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="block";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none";
+            }
+            function a1fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="block";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="none";
+            }
+            function a2fun()
+            {   
+                var divTag=document.getElementById("b1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("b2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("i2DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a1DIV");divTag.style.display="none";
+                var divTag=document.getElementById("a2DIV");divTag.style.display="block";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>Exercises</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+    h2
+    { 
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 250%;
+        text-shadow: 2px 2px rgb(128, 126, 123);
+    }
+    p{
+        text-align: justify;
+    }
+    body{background-color: peachpuff; font-size: 110%;}
+    .container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.btns{
+    border-color: brown;
+    font-size: 15px; margin-left: 1%;
+    background-color: orange;
+    border-radius: 9px;
+    padding:1%;
+}
+figure {
+  max-width: 100%
+}
+
+.imageRight {
+  flex-basis: 40%
+}
+.imageLeft{
+flex-basis: 70%;
+        order: 2;
+}
+.text {
+    font-size: 20px;
+    padding-left: 2%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+}
+</style>
+<script>
+    function abc()
+    {
+        num=document.getElementById("d1").value;
+        if (num==15)
+        {
+            ajaxCall(15);
+        }
+        else if (num==30)
+        {
+            ajaxCall(30);
+        }
+        else if (num==60)
+        {
+            ajaxCall(60);
+        }
+        else{
+            alert("Not working");
+        }
+
+    }
+    function ajaxCall(Duration) 
+    { 
+        //var Duration=document.getElementsByName("Duration").value;
+        var xh = new XMLHttpRequest(); 
+        xh.onreadystatechange = function() 
+        { 
+            if (this.readyState == 4 && this.status == 200) 
+            { 
+                document.write(this.responseText);
+            } 
+        }; 
+    xh.open("POST","2.1.random.php",true); 
+    xh.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    xh.send("Duration="+Duration); 
+    }
+</script>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    window.onscroll = function() {myFunction1()};
+    var myTopnav = document.getElementById("myTopnav");
+    var sticky = myTopnav.offsetTop;
+    
+    function myFunction1() {
+      if (window.pageYOffset >= sticky) {
+        myTopnav.classList.add("sticky")
+      } else {
+        myTopnav.classList.remove("sticky");
+      }
+    }
+</script>
+<link rel="stylesheet" href="navstyle.css">
+<body>
+    <h1 style="text-align: center;font-style: oblique;font-family: 'Franklin Gothic Medium';">Fitness1st</h1>
+    <div class="topnav" id="myTopnav">
+    <a href="../Pranav/review2_homepage.html">Home</a>
+    <a href="../Niranjan/FDCMP.html" >Food</a>
+    <a href="../Priya/1.Page1.html" class="active">Workout</a>
+    <div class="dropdown">
+        <button class="dropbtn">Fitness Calculator 
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="../Bhuvi/bmi.html">BMI Calculator</a>
+            <a href="../Bhuvi/bmr.html">Steps to Calories</a>
+            <a href="../Bhuvi/cal.html">Body Metabolism Calculator</a>
+            <a href='../Niranjan/Calories.php'>Calorie Calculator</a>
+        </div>
+    </div> 
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <a href="../Vignesh/myinfo.php">Profile</a>
+    <a href="../Pranav/Forum/login.php">Forum</a>
+    <a href="../Vignesh/login.php" >Login</a>
+    </div>
+    <h2>Random Workout Generator</h2>
+    <br><br>
+    <form method="POST" action="2.1.random.php">
+    <p>Enter the duration in minutes (15/30/60 mins)</p>
+        <input type="number" name="Duration" id="d1">
+    <input type="button" class="btns" onclick="abc()" value="Click here to generate workout">
+    </form>
+    <form>
+        <p style="text-align: right;">
+        <a href="1.Page1.html"><input type="button" class="btns" value="Back"></a><br></p>
+    </form>
+    <div class="bottomnav" id="bn">
+        <a href="../Pranav/contactus.html">Contact Us</a>
+        <a href="../Pranav/FAQ.html">FAQ</a>
+    </div>
+</body>
+</html>

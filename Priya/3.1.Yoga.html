@@ -1,0 +1,289 @@
+<html>
+    <head>
+        <title>Yoga</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+    h2
+    { text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 250%; }
+    p{text-align: justify;}
+    body{ padding: 3%; padding-top: 0%; font-size: 110%; background-color: peachpuff;}
+    #inten{box-shadow: 3px 3px 2px brown;
+        background-color: orange;
+	border-radius: .75rem 25px 5% 3em;
+	padding: 0.8rem;
+    font-size: 120%;
+    }
+    h4{
+        box-shadow: 1px 1px 1px lightcoral;
+        background-color: #ffe3b9;
+        border-radius: .75rem 25px 5% 3em;
+        padding: 0.8rem;
+    }
+    .btns{
+    border-color: brown;
+    font-size: 15px; margin-left: 1%;
+    background-color: orange;
+    border-radius: 9px;
+    padding:1%;
+    }
+    </style>
+    <script>
+        function begYoga()
+        {
+            var divTagBeg=document.getElementById("yogBeg");divTagBeg.style.display="block";
+            var divTagInt=document.getElementById("yogInt");divTagInt.style.display="none";
+            var divTagAdv=document.getElementById("yogAdv");divTagAdv.style.display="none";
+        }
+        function intYoga()
+        {
+            var divTagBeg=document.getElementById("yogBeg");divTagBeg.style.display="none";
+            var divTagInt=document.getElementById("yogInt");divTagInt.style.display="block";
+            var divTagAdv=document.getElementById("yogAdv");divTagAdv.style.display="none";
+        }
+        function advYoga()
+        {
+            var divTagBeg=document.getElementById("yogBeg");divTagBeg.style.display="none";
+            var divTagInt=document.getElementById("yogInt");divTagInt.style.display="none";
+            var divTagAdv=document.getElementById("yogAdv");divTagAdv.style.display="block";
+        }
+    </script>
+    <body>
+        <h2><i>YOGA</i></h2>
+        <p id="inten"><b>Intensity</b></p>
+        <form style="padding: 2%;">
+        <input type="radio" name="Intensity" value="Beginner" onclick="begYoga()">Beginner<br>
+        <input type="radio" name="Intensity" value="Intermediate" onclick="intYoga()">Intermediate<br>
+        <input type="radio" name="Intensity" value="Advanced" onclick="advYoga()">Advanced
+        </form>
+        <div id="yogBeg" style="display:none;">
+            <h4>Following are the Yoga Asanas recommended for a beginner</h4>
+                <ol>
+                    <li id="vajrasana">Vajrasana</li>
+                    <li id="surya">Naukasana</li>
+                </ol>
+            <h4>Click on any Asana to know more about it.</h4>
+        </div>
+        <div id="yogInt" style="display:none;">
+            <h4>Following are the Yoga Asanas recommended for intermediate level</h4>
+            <ol>
+                <li id="matsyasana">Matsyasana</li>
+                <li id="halasana">Halasana</li>
+            </ol>
+            <h4>Click on any Asana to know more about it.</h4>
+        </div>
+        <div id="yogAdv" style="display:none;">
+            <h4>Following are the Yoga Asanas recommended for advanced level</h4>
+            <ol>
+                <li id="kakasana">Kakasana</li>
+                <li id="hanumanasana">Hanumanasana</li>
+            </ol>
+            <h4>Click on any Asana to know more about it.</h4>
+        </div>
+        <br>
+            <div id="halasanaDIV" style="display: none;">
+                <p style="text-align:center; font-size: 120%;"><b>HALASANA (Plow pose)</b><br><br>
+                    <img src="halasana.jpg" width="540" height="260"</p>
+                <p>Steps to follow:</p>
+                <ol>
+                <li>Lie on your back with your arms beside you, palms downwards.</li>
+                <li>As you inhale, use your abdominal muscles to lift your feet off the floor, raising your legs vertically at a 90-degree angle.</li>
+                <li>Continue to breathe normally and supporting your hips and back with your hands, lift them off the ground.</li>
+                <li>Allow your legs to sweep in a 180-degree angle over your head till your toes touch the floor. Your back should be perpendicular to the floor. This may be difficult initially, but make an attempt for a few seconds.</li>
+                <li>Hold this pose and let your body relax more and more with each steady breath.</li>
+                <li>After about a minute (a few seconds for beginners) of resting in this pose, you may gently bring your legs down on exhalation.</li>
+                </ol>
+                <p style="text-align:center">Video reference:<br><br>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/zOZumZ_lD1c" title="Halasana" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p>Benefits of performing Halasana:</p>
+                <ol>
+                    <li>Strengthens and opens up the neck, shoulders, abs and back muscles.</li>
+                    <li>Calms the nervous system, reduces stress and fatigue.</li>
+                    <li>Tones the legs and improves leg flexibility.</li>
+                </ol>
+            </div>
+            <div id="MatsyasanaDIV" style="display: none;">
+                <p style="text-align:center;font-size: 120%;"><b>MATSYASANA (Fish pose)</b><br><br>
+                    <img src="matsyasana.jpg" width="540" height="260"</p>
+                <p>Steps to follow:</p>
+                <ol>
+                <li>Come up to your elbows with your forearms flat on the mat and your upper arms perpendicular to the floor.</li>
+                <li>Keep your forearms in place and puff up your chest by rolling your shoulders back and tucking your shoulder blades firmly onto your back. You should feel your body creating a backbend.</li>
+                <li>Press your palms into the mat. You can tuck your hands under your butt if that feels like a more stable position for them.</li>
+                <li>Lower the crown (very top) of your head back until it comes to the floor, opening your throat.</li>
+                <li>Keep your legs engaged and your toes active throughout.</li>
+                <li>To come out, press strongly into your forearms and raise your head off the floor. Then release your upper body to the mat.</li>
+                </ol>
+                <p style="text-align:center">Video reference:<br><br>
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/MEgYDfwMV_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p>Benefits of performing Matsyasana:</p>
+                <ol>
+                    <li>Promotes respiration</li>
+                    <li>Relieves stress</li>
+                    <li>Strengthens spine</li>
+                </ol>
+            </div>
+            <div id="suryaDIV" style="display: none;">
+                <p style="text-align:center;font-size: 120%;"><b>NAUKASANA (Boat pose)</b><br><br>
+                    <img src="naukasana.jpg" width="40%" height="50%"></p>
+                <p>Steps to follow:</p>
+                <ol>
+                <li>Lie on your back with your feet together and arms beside your body.</li>
+                <li>Take a deep breath in and as you exhale, lift your chest and feet off the ground, stretching your arms towards your feet.</li>
+                <li>Feel the tension in your navel area as the abdominal muscles contract.</li>
+                <li>Keep breathing deeply and easily while maintaining the pose.</li>
+                <li>As you exhale, come back to the ground slowly and relax.</li>
+                </ol>
+                <p style="text-align:center">Video reference:<br><br>
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/AV7VHk5qlHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p>Benefits of performing Naukasana:</p>
+                <ol>
+                    <li>Useful for people with hernia</li>
+                    <li>Tones the leg and arms muscles.</li>
+                    <li>Strengthens the back and abdominal muscles.</li>
+                </ol>
+            </div>
+            <div id="vajraDIV" style="display: none;">
+                <p style="text-align:center;font-size: 120%;"><b>VAJRASANA (Diamond pose)</b><br><br>
+                    <img src="vajrasana.jpg" width="20%" height="50%"></p>
+                <p>Steps to follow:</p>
+                <ol>
+                <li>Start by kneeling on the floor. Consider using a yoga mat for comfort.</li>
+                <li>Pull your knees and ankles together and point your feet in line with your legs. The bottoms of your feet should face upward with your big toes touching.</li>
+                <li>Exhale as you sit back on your legs. Your buttocks will rest on your heels and your thighs will rest on your calves.</li>
+                <li>Put your hands on your thighs and adjust your pelvis slightly backward and forward until you’re comfortable.</li>
+                <li>Breathe in and out slowly as you position yourself to sit up straight by straightening your spine. Use your head to pull your body upward and press your tailbone toward the floor.</li>
+                <li>Straighten your head to gaze forward with your chin parallel to the floor. Position your hands palms down on your thighs with your arms relaxed.</li>
+                </ol>
+                <p style="text-align:center">Video reference:<br><br>
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/82p0aGNJSF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p>Benefits of performing Vajrasana:</p>
+                <ol>
+                    <li>Aids in digestion.</li>
+                    <li>Prevents constipation.</li>
+                    <li>Relieves knee pain</li>
+                </ol>
+            </div>
+            <div id="kakaDIV" style="display:none;">
+                <p style="text-align:center;font-size: 120%;"><b>KAKASANA (Crow pose)</b><br><br>
+                    <img src="kakasana.jpg" width="40%" height="50%"></p>
+                <p>Steps to follow:</p>
+                <ol>
+                <li>Stand at the top of your mat in Tadasana, Mountain Pose. With your arms relaxed by your sides, your feet should be in position at hip width.</li>
+                <li>Come into a squat by slowly bending your knees and lowering your hips. While squatting, keep your feet as close together as you can. Open your thighs so they’re just a bit wider than your body. If you find your heels lifting off the floor you can fold the mat to place underneath them.</li>
+                <li>Push your body forward slightly while placing your upper arms along the inside of your knees. Bring your hands into the prayer position. This beginning stage of Crow pose is Malasana, the Garland pose. Rest here for a minute or two.</li>
+                <li>Slowly place your hands on the mat with fingers spread, keeping them palm down at shoulder distance. Push slightly into your hands, with the weight evenly distributed across both.</li>
+                <li>Push your shins up against the back of your arms. Then slowly pull your knees into your underarms as closely as you can.</li>
+                <li>While leaning forward, lift onto the balls of your feet. While keeping your back rounded, pull in your stomach muscles. Your lower back and tailbone should be tucked into position towards the heels.</li>
+                <li>Find a focal point between your hands on the floor directly in front of you or slightly ahead.</li>
+                <li>While leaning forward just a bit, lift both your feet off the floor and pull your heels in toward your bottom. If you’re unable to lift both feet at once, start with first one and then lift the other.</li>
+                <li>Balance your upper body and legs on the back of the upper arms. If possible, touch the big toes together.</li>
+                <li>Hold the Crow pose for one minute before releasing back into Malasana. Repeat the pose 3 or 4 more times.</li>
+                </ol>
+                <p style="text-align:center">Video reference:<br><br>
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/F4S96QNCPHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p>Benefits of performing Kakasana:</p>
+                <ol>
+                    <li>Alleviates heart burn and acid reflux</li>
+                    <li>Eases lower back pain.</li>
+                    <li>Encourages inner focus and concentration.</li>
+                </ol>
+            </div>
+            <div id="hanuDIV" style="display:none;">
+                <p style="text-align:center;font-size: 120%;"><b>HANUMANASANA (Monkey pose)</b><br><br>
+                    <img src="hanumanasana.jpg" width="40%" height="50%"></p>
+                <p>Steps to follow:</p>
+                <ol>
+                    <li>Start in Lunge Pose with one foot in front, placing your knee over your ankle.</li>
+                    <li>Place both hands on the floor next to your front leg.</li>
+                    <li>The back knee is on the floor, toes are pointed away from you.</li>
+                    <li>Start sliding the front heel forward. You might want to try this on non-sticky surface which allows you to slide easily.</li>
+                    <li>Lift the ball of the front foot up and slide the front leg as far as your hamstrings allow you to. You might first want to stop at Ardha Hanumanasana, the Half Split Pose, take a few breaths there, and then continue.</li>
+                    <li>As your front leg straightens, start pushing the back knee backwards so your back thigh is getting closer towards the floor. Make sure your back leg remains straight from hip and is not extending towards either side.</li>
+                    <li>Keep hips square towards the front of the mat and focus on leveling the pelvis instead of reaching to the ground. Press your inner thighs towards each other to help support the pelvis.</li>
+                    <li>When you reach the ground, straighten your spine and lift up your hand towards the sky.</li>
+                    <li>Start from staying in the pose for 20 seconds and work your way up to 1 minute.</li>
+                    <li>To come out, carefully lean to the side of your front leg, sit on your outer hip, and bring the legs together.</li>
+                </ol>
+                <p style="text-align:center">Video reference:<br><br>
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/H38Jr9PnbLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                <p>Benefits of performing Hanumanasana:</p>
+                <ol>
+                    <li>Gives a feeling of grounding.</li>
+                    <li>Tones all leg muscles.</li>
+                    <li>Balances the nervous system.</li>
+                </ol>
+            </div>
+        <form name="end">
+        <p style="text-align: right;"><a href="3.0.Exercises.html"><input type="button" class="btns" value="Back"></a><br></p>
+        </form>
+        <script>
+            document.getElementById("halasana").addEventListener("click",halasana);
+            document.getElementById("matsyasana").addEventListener("click",matsyasana);
+            document.getElementById("surya").addEventListener("click",suryasana);
+            document.getElementById("vajrasana").addEventListener("click",vajrasana);
+            document.getElementById("kakasana").addEventListener("click",kakasana);
+            document.getElementById("hanumanasana").addEventListener("click",hanumanasana);
+            
+            function halasana()
+            {   
+                var divTag=document.getElementById("suryaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("MatsyasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("halasanaDIV");divTag.style.display="block";
+                var divTag=document.getElementById("vajraDIV");divTag.style.display="none";
+                var divTag=document.getElementById("kakaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("hanuDIV");divTag.style.display="none";
+                
+            }
+            function matsyasana()
+            {
+                var divTag=document.getElementById("suryaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("halasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("MatsyasanaDIV");divTag.style.display="block";
+                var divTag=document.getElementById("vajraDIV");divTag.style.display="none";
+                var divTag=document.getElementById("kakaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("hanuDIV");divTag.style.display="none";
+            }
+            function suryasana()
+            {
+                var divTag=document.getElementById("suryaDIV");divTag.style.display="block";
+                var divTag=document.getElementById("halasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("MatsyasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("vajraDIV");divTag.style.display="none";
+                var divTag=document.getElementById("kakaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("hanuDIV");divTag.style.display="none";
+            }
+            
+            function vajrasana()
+            {
+                var divTag=document.getElementById("suryaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("MatsyasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("halasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("vajraDIV");divTag.style.display="block";
+                var divTag=document.getElementById("kakaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("hanuDIV");divTag.style.display="none";
+                
+            }
+            function kakasana()
+            {
+                var divTag=document.getElementById("suryaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("MatsyasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("halasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("vajraDIV");divTag.style.display="none";
+                var divTag=document.getElementById("kakaDIV");divTag.style.display="block";
+                var divTag=document.getElementById("hanuDIV");divTag.style.display="none";
+
+            }
+            function hanumanasana()
+            {
+                var divTag=document.getElementById("suryaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("MatsyasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("halasanaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("vajraDIV");divTag.style.display="none";
+                var divTag=document.getElementById("kakaDIV");divTag.style.display="none";
+                var divTag=document.getElementById("hanuDIV");divTag.style.display="block";
+            }
+            
+        </script>
+    </body>
+</html>

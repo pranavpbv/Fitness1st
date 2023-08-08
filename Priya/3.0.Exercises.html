@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Exercises</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+    h2
+    { 
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 250%;
+        text-shadow: 2px 2px rgb(128, 126, 123);
+    }
+    p{
+        text-align: justify;
+    }
+    body{background-color: peachpuff;}
+    .container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.btns{
+    border-color: brown;
+    font-size: 15px; margin-left: 1%;
+    background-color: orange;
+    border-radius: 9px;
+    padding:1%;
+}
+figure {
+  max-width: 100%
+}
+
+.imageRight {
+  flex-basis: 40%
+}
+.imageLeft{
+flex-basis: 70%;
+        order: 2;
+}
+.text {
+    font-size: 20px;
+    padding-left: 2%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+}
+    figure { display: inline-block;  }
+    figure img {vertical-align: top;}
+    figure figcaption {text-align: center;}
+    </style>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        window.onscroll = function() {myFunction1()};
+        var myTopnav = document.getElementById("myTopnav");
+        var sticky = myTopnav.offsetTop;
+        
+        function myFunction1() {
+          if (window.pageYOffset >= sticky) {
+            myTopnav.classList.add("sticky")
+          } else {
+            myTopnav.classList.remove("sticky");
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="navstyle.css">
+    <body>
+        <h1 style="text-align: center;font-style: oblique;font-family: 'Franklin Gothic Medium';">Fitness1st</h1>
+    <div class="topnav" id="myTopnav">
+    <a href="../Pranav/review2_homepage.html">Home</a>
+    <a href="../Niranjan/FDCMP.html" >Food</a>
+    <a href="../Priya/1.Page1.html" class="active">Workout</a>
+    <div class="dropdown">
+        <button class="dropbtn">Fitness Calculator 
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="../Bhuvi/bmi.html">BMI Calculator</a>
+            <a href="../Bhuvi/bmr.html">Steps to Calories</a>
+            <a href="../Bhuvi/cal.html">Body Metabolism Calculator</a>
+            <a href='../Niranjan/Calories.php'>Calorie Calculator</a>
+        </div>
+    </div> 
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <a href="../Vignesh/myinfo.php">Profile</a>
+    <a href="../Pranav/Forum/login.php">Forum</a>
+    <a href="../Vignesh/login.php" >Login</a>
+    </div>
+        <h2>Exercises</h2><br>
+        <div class="container">
+            <div class="imageRight">
+                <figure>
+                    <a href="3.1.Yoga.html">
+                    <img src="yoga_new.png" alt="Yoga" style="width:220px; height:170px"></a>
+                    <figcaption>YOGA</figcaption>
+                </figure>
+            </div>
+            <div class="text">
+                <p>
+                    Yoga is essentially a spiritual discipline based on an extremely subtle science, which focuses on bringing harmony between mind and body. It is an art and scince of healthy living.The word 'Yoga' is derived from the Sanskrit root 'Yuj' meaning 'to join'. As per Yogic scriptures the practice of Yoga leads to the union of individual consciousness with that of the Universal Consciousness, indicating a perfect harmony between the mind and body, Man & Nature
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="imageLeft">
+                <figure>
+                    <a href="3.3.Strength.html">
+                    <img src="strength_new.png" alt="Strength" style="width:220px; height:170px"></a>
+                    <figcaption>STRENGTH TRAINING</figcaption>
+                </figure>
+            </div>
+            <div class="text">
+                <p>
+                    Strength training or resistance training involves the performance of physical exercises that are designed to improve strength and endurance. It is often associated with the lifting of weights. It can also incorporate a variety of training techniques such as calisthenics, isometrics, and plyometrics. Your body fat percentage will increase over time if you don't do anything to replace the lean muscle you lose over time. Strength training can help you preserve and enhance your muscle mass at any age
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="imageRight">
+                <figure>
+                    <a href="3.4.Cardio.html">
+                    <img src="cardio_new.png" alt="CARDIO" style="width:220px; height:170px"></a>
+                    <figcaption>CARDIO</figcaption>
+                </figure>
+            </div>
+            <div class="text">
+                <p>
+                    Cardio exercise, which is sometimes referred to as aerobic exercise, is any rhythmic activity that raises your heart rate into your target heart rate zone. This is the zone where you burn the most fat and calories. Some of the most common examples of cardio include walking, cycling, and swimming. However, even household chores like vacuuming and mopping can qualify as cardio exercise.
+                </p>
+            </div>
+        </div>
+        <h4 align="center">Do you wish to add some more exercises to our directory? <a href="5.0.Suggestions.html">click here.</a><br>
+            Note: Only CERTIFIED FITNESS INSTRUCTORS can suggest new workouts.
+        </h4>
+        <form name="f1">
+            <p style="text-align: right;">
+            <a href="1.Page1.html"><input type="button" class="btns" value="Back"></a><br></p>
+        </form>
+        <div class="bottomnav" id="bn">
+            <a href="../Pranav/contactus.html">Contact Us</a>
+            <a href="../Pranav/FAQ.html">FAQ</a>
+        </div>
+    </body>
+</html>

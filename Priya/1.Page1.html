@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Workout Plans</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+    h2
+    { 
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 250%;
+        text-shadow: 2px 2px rgb(128, 126, 123);
+    }
+#divs
+    {
+        background-color:  rgb(255, 165, 0);
+        float:left;
+        height:60%;
+        width:20%;
+        border: 5px double rgb(165,42,42);
+        padding:2.5%;
+        margin: 20px;
+        border-radius: 25px;
+}
+.btns{
+    border-color: brown;
+    font-size: 15px; margin-left: 1%;
+    background-color: peachpuff;
+    border-radius: 9px;
+    padding:1%;
+}
+
+body{background-color: peachpuff;}
+
+    </style>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        window.onscroll = function() {myFunction1()};
+        var myTopnav = document.getElementById("myTopnav");
+        var sticky = myTopnav.offsetTop;
+        
+        function myFunction1() {
+          if (window.pageYOffset >= sticky) {
+            myTopnav.classList.add("sticky")
+          } else {
+            myTopnav.classList.remove("sticky");
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="navstyle.css">
+    <body>
+        <h1 style="text-align: center;font-style: oblique;font-family: 'Franklin Gothic Medium';">Fitness1st</h1>
+    <div class="topnav" id="myTopnav">
+    <a href="../Pranav/review2_homepage.html">Home</a>
+    <a href="../Niranjan/FDCMP.html" >Food</a>
+    <a href="../Priya/1.Page1.html" class="active">Workout</a>
+    <div class="dropdown">
+        <button class="dropbtn">Fitness Calculator 
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="../Bhuvi/bmi.html">BMI Calculator</a>
+            <a href="../Bhuvi/bmr.html">Steps to Calories</a>
+            <a href="../Bhuvi/cal.html">Body Metabolism Calculator</a>
+            <a href='../Niranjan/Calories.php'>Calorie Calculator</a>
+        </div>
+    </div> 
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <a href="../Vignesh/myinfo.php">Profile</a>
+    <a href="../Pranav/Forum/login.php">Forum</a>
+    <a href="../Vignesh/login.php" >Login</a>
+    </div>
+    <br><br>
+        <h2><i>Workout Plans</i></h2>
+        <div style="text-align:center; padding-left: 11%;">
+        <div id="divs">
+            <img src="exe.png" width="172" height="192">
+            <p>Choose an exercise that suits your level of difficulty and expected benefits from our list of exercises across the domains of Yoga, Strength Training and Cardio.<br><br>
+            <a href="3.0.Exercises.html"><input type="button" class="btns" value="Exercises"></a><br></p>
+        </div>
+        <div id="divs">
+            <img src="list.png" width="172" height="192">
+            <p>Looking for a pre-made workout regime? You're at the right place! <br>Click here to checkout the various regimes as recommended by health experts.<br><br>
+            <a href="4.PremadeWorkouts.html"><input type="button" class="btns" value="Premade Workouts"></a><br></p>
+        </div>
+        <div id="divs">
+            <img src="random.png" width="172" height="192">
+            <p>Confused about which regime to pick? We've got you covered! <br>Click here to generate a temporary random workout immediately.<br><br>
+            <a href="2.RandomWorkoutGen.html"><input type="button" class="btns" value="Random Workout Generator"></a><br></p>
+        </div>
+    </div>
+    <br><br>
+    
+    </body>
+</html>

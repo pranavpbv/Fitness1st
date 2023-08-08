@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Workout Plans</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+    h2
+    { 
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 250%;
+        text-shadow: 2px 2px rgb(128, 126, 123);
+    }
+    
+#divs
+    {
+        background-color:  rgb(255, 165, 0);
+        float:left;
+        clear: left;
+        height:36%;
+        width:95%;
+        border: 5px double rgb(165,42,42);
+        margin: 20px;
+        border-radius: 25px;
+        padding-left: 2%;
+}
+.btns{
+    border-color: brown;
+    font-size: 15px; margin-left: 1%;
+    background-color: peachpuff;
+    border-radius: 9px;
+    padding:1%;
+}
+.imageRight {
+  flex-basis: 0%;
+}
+.imageLeft{
+    flex-basis: 20%;
+        order: 2;
+}
+.text {
+    font-size: 20px;
+    padding-left: 2%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+body{background-color: peachpuff;}
+    </style>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        window.onscroll = function() {myFunction1()};
+        var myTopnav = document.getElementById("myTopnav");
+        var sticky = myTopnav.offsetTop;
+        
+        function myFunction1() {
+          if (window.pageYOffset >= sticky) {
+            myTopnav.classList.add("sticky")
+          } else {
+            myTopnav.classList.remove("sticky");
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="navstyle.css">
+    <body>
+        <h1 style="text-align: center;font-style: oblique;font-family: 'Franklin Gothic Medium';">Fitness1st</h1>
+    <div class="topnav" id="myTopnav">
+    <a href="../Pranav/review2_homepage.html">Home</a>
+    <a href="../Niranjan/FDCMP.html" >Food</a>
+    <a href="../Priya/1.Page1.html" class="active">Workout</a>
+    <div class="dropdown">
+        <button class="dropbtn">Fitness Calculator 
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="../Bhuvi/bmi.html">BMI Calculator</a>
+            <a href="../Bhuvi/bmr.html">Steps to Calories</a>
+            <a href="../Bhuvi/cal.html">Body Metabolism Calculator</a>
+            <a href='../Niranjan/Calories.php'>Calorie Calculator</a>
+        </div>
+    </div> 
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <a href="../Vignesh/myinfo.php">Profile</a>
+    <a href="../Pranav/Forum/login.php">Forum</a>
+    <a href="../Vignesh/login.php" >Login</a>
+    </div>
+        <h2>Pre-made Workouts</h2>
+        <div>
+        <div id="divs">
+            <div class="container">
+                <div class="imageRight">
+                <img src="beginnerfriendly_new.png" width="172" height="140"></div>
+                <div class="text">
+                <p>It is advisable that people who are new to the world of workouts get expert advice and a proper regime that is curated keeping their state in mind. Doing advanced exercises right in the beginning might lead to adverse health effects. Here is our pre-made workout, designed speacially for the beginners! Go ahead, and begin your journey on this path of fitness!
+                </p><br>
+                <a href="4.1.Beg.html"><input type="button" class="btns" value="Beginner Friendly"></a><br></p>
+                </div>
+            </div>
+        </div>
+        <div id="divs">
+            <div class="container">
+                <div class="imageRight">
+                <img src="body building_new.png" width="172" height="140"></div>
+                <div class="text">
+                <p>
+                    If you want to get serious about bodybuilding, you’ll need to navigate your nutrition and training with military precision. Your regime will differ wildly from the regular regimes. Here, you can find the Bodybuilding program and workout routine that stimulates muscle growth for the look and feel you want.
+                </p><br>
+                <a href="4.2.BodyB.html"><input type="button" class="btns" value="Body Bulding"></a><br></p>
+                </div>
+            </div>
+        </div>
+        <div id="divs">
+            <div class="container">
+                <div class="imageRight">
+                <img src="flexibility_new.png" width="150" height="140"></div>
+                <div class="text">
+                <p>
+                    Stretching the body’s muscles provides freedom of movement to do the things you need to do and the things you like to do. Combining it with few other body movements, one can expect the endurance levels to increase as well. If your focus is increasing flexibility and endurance, you are at the right place!
+                </p><br>
+                <a href="4.3.FandE.html"><input type="button" class="btns" value="Flexibility and Endurance oriented"></a><br></p>
+                </div>
+            </div>
+        </div>
+        <div id="divs">
+            <div class="container">
+                <div class="imageRight">
+                <img src="weight loss_new.png" width="172" height="140"></div>
+                <div class="text">
+                <p>
+                    Weight loss is one of the most important goals of people who turn to exercises. If you want to see and maintain results, you have to have a plan of action. Here is a specially curated plan for people who are looking for a workout plan that can help them lose weight, adding more sweat sessions to their weekly routine!
+                </p><br>
+                <a href="4.4.WL.html"><input type="button" class="btns" value="Weight Loss"></a><br></p>
+                </div>
+            </div>
+        </div>
+        <form name="f1">
+            <p style="text-align: right;">
+            <a href="1.Page1.html"><input type="button" class="btns" style="background-color: orange" value="Back"></a><br></p>
+        </form>
+
+    </div>
+    <div class="bottomnav" id="bn">
+        <a href="../Pranav/contactus.html">Contact Us</a>
+        <a href="../Pranav/FAQ.html">FAQ</a>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<?php
+
+    $answer = $_POST['NAME']; 
+    $conn=new mysqli("localhost","root","","customer");
+    if($conn->connect_error)
+    {
+        die("Connection failed:".$conn->connect_error);
+    }
+    $stmt=$conn->prepare("Select * from details where name=?"); 
+    $stmt->bind_param("s",$answer);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    while($row = $result->fetch_assoc())
+    {
+        $age=(int)$row['Age'];
+        $ht=(int)$row['Height'];
+        $wt=(int)$row['Weight'];
+    }
+    $ans=($wt)*10000/(($ht)*($ht)); //Formula paathuko
+    echo $ans;
+    $stmt->close();
+?>

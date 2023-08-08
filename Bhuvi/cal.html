@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Step-Calories Converter</title>
+</head>
+<style>
+h2
+    { 
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 250%;
+        text-shadow: 2px 2px rgb(128, 126, 123);
+    }
+    fieldset {
+    width: 300px;
+    margin: 25px 0 0 50px;
+    border: 1px;
+    border-style: solid;
+    border-color: brown;
+    box-shadow: 1px 1px #cccccc;
+    padding: 10px;
+    background: #ffd580;
+    }
+    #Steps {
+    padding: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 15px 50px;
+    box-shadow: 3px 3px #ffe3b9;
+    background: #E55B3C;
+    padding: 20px; 
+    text-transform: uppercase;
+    }
+    #divs
+    {
+        background-color:  #FFAE42;
+        height:60%;
+        width:22%;
+        border: 5px double rgb(165,42,42);
+        padding-right: 4%;
+        padding-bottom: 2.5%;
+        margin: 20px;
+        border-radius: 25px;
+    }
+    .btns{
+    border-color: brown;
+    background-color: orange;
+    border-radius: 9px;
+    }
+    .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(209, 89, 46);
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .active {
+    background-color:brown;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #dfa130;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(105, 64, 27);
+    color:chocolate;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: brown;
+    color: rgb(255, 255, 255);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  
+  .bottomnav {
+    overflow:auto;
+    background-color:rgb(199, 80, 36);
+    color: #ffffff;
+    width: auto;
+    position:static;
+    bottom: 0%;
+    text-align: center;
+    
+  }
+  
+  
+  .bottomnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    font-variant: small-caps;
+    opacity: 100%;
+    
+  }
+  
+  .bottomnav a:hover {
+    background-color: rgb(105, 64, 27);;
+    color: chocolate;
+  }
+  
+  .bottomnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+</style>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  window.onscroll = function() {myFunction1()};
+  var myTopnav = document.getElementById("myTopnav");
+  var sticky = myTopnav.offsetTop;
+  
+  function myFunction1() {
+    if (window.pageYOffset >= sticky) {
+      myTopnav.classList.add("sticky")
+    } else {
+      myTopnav.classList.remove("sticky");
+    }
+  }
+</script>
+<link rel="stylesheet" href="navstyle.css">
+<body style="background-color:peachpuff;">
+  <h1 style="text-align: center;font-style: oblique;font-family: 'Franklin Gothic Medium';">Fitness1st</h1>
+    <div class="topnav" id="myTopnav">
+    <a href="../Pranav/review2_homepage.html">Home</a>
+    <a href="../Niranjan/FDCMP.html">Food</a>
+    <a href="../Priya/1.Page1.html">Workout</a>
+    <div class="dropdown">
+        <button class="dropbtn">Fitness Calculator 
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="../Bhuvi/bmi.html">BMI Calculator</a>
+            <a href="../Bhuvi/bmr.html">Steps to Calories</a>
+            <a href="../Bhuvi/cal.html" class="active">Body Metabolism Calculator</a>
+            <a href='../Niranjan/Calories.php'>Calorie Calculator</a>
+        </div>
+    </div> 
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <a href="../Vignesh/myinfo.php">Profile</a>
+    <a href="../Pranav/Forum/login.php">Forum</a>
+    <a href="../Vignesh/login.php" >Login</a>
+    </div>
+    <br><br>
+  <script>
+    //AJAX
+      function check()
+      {
+          var gender=document.getElementById("gen").value;
+          if(gender=="male")
+          {
+            result = [66.47 + (13.75 * weight) + (5.0 * height - (6.75 * age))]*speed*step*1.13/100000
+          }
+          else
+          {
+            result = [665.09 + (9.56 * weight) + (1.84 * height - (4.67 * age))]*speed*step*1.13/100000
+          }
+      }
+      function ajaxCal() 
+      { 
+          //alert("Entered ajax");
+          //var Duration=document.getElementsByName("Duration").value;
+          var xh = new XMLHttpRequest(); 
+          var name=document.getElementById("N").value;
+          xh.onreadystatechange = function() 
+          { 
+              if (this.readyState == 4 && this.status == 200) 
+              { 
+                  document.getElementById("totalcals").value=this.responseText;
+              } 
+          }; 
+      xh.open("POST","bmrphp.php",true); 
+      xh.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+      xh.send("NAME="+name); 
+      }
+  </script>
+<center>
+<h2>STEPS TO CALORIES CONVERTOR</h2>
+<div id="Steps">
+<h3>The steps to calories calculator helps you to estimate the total amount of calories burned while walking.</h3>
+</div>
+<span style = "float:left; margin-top:100px; height: 600px; width: 500px">
+<img src="https://www.weightlossresources.co.uk/img/b/burn-more-calories.jpg" alt="Calories1" style="width:400px;height:300px;">
+</span>
+<span style = "float:right; margin-top:100px; height: 600px; width: 500px">
+<img src="https://www.whyiexercise.com/images/calories.burned.during.exercise.walking.jpg" style="width:400px;height:300px;">
+</span>
+<div id="divs">
+<form name="f1">
+<fieldset>
+  <div class="c1">
+  <label>Name of the person: </label>
+    <div class="c2">
+        <input aria-label="Name" id="N" name="NAME">
+        <span class="uh"></span>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="c1">
+<label>Total Number of Steps</label>
+<div class="c2">
+<input aria-label="Total Number of Steps" id="step" name="step" class="c3" type="number">
+<span class="uh"></span>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="c4">
+<label>Age</label>
+<div class=c5">
+<input aria-label="Age" id="age" name="age" class="c6" type="number" value="">
+<span class="uh"></span>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="c7">
+<label>Height (cms)</label>
+<div class="c8">
+<input aria-label="Height (cm)" id="height" name="height" class="c9" type="number" value="">
+<span class="uh"></span>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="c10">
+<label>Weight (kg)</label>
+<div class="c1">
+<input aria-label="Weight (kg)" id="weight" name="weight" class="c11" type="number" value="">
+<span class="uh"></span>
+</div>
+<div class="c12">
+<label>Walking Speed (MPH) -- The average speed for a human is 3.0mph</label>
+<div class="c1">
+<input aria-label="Walking Speed (MPH) -- The average speed for a human is 3.0mph" id="speed" name="fieldname6_2" class="field number large" type="number" value="">
+<span class="uh"></span>
+</div>
+<div class="clearer"></div>
+</div>
+<div class="c13">
+  <label><font color="Brown">Choose your gender: </font></label>
+  <label>Female:
+    <input id="female" type="radio" name="gender">
+  </label>
+  <label>Male:
+    <input id="male" type="radio" name="gender">
+  </label>
+<span class="uh"></span>
+</div>
+<div class="clearer"></div>
+<div class="clearer"></div>
+</div>
+</fieldset>
+<fieldset>
+<div class="c2">
+  <input type="button" value="Calculate" class ="btns" id="b3" onclick="cals()">
+<span class="uh"></span>
+<div class="clearer"></div>
+</div><br>
+<input type="button" class="btns" style="text-align: center;" value="Fetch Details" onclick="alert('Oops! You have not signed in yet. Sign in to fetch details automatically.')">
+<div class="clearer"></div>
+<div class="c2">
+<label>Calories Burned</label><br><br>
+<div class="c1">
+  <p id="calories" style = "background-color:white; width:170px; margin-top:-10px;text-align:right"> </p> 
+<span class="uh"></span></div>
+</fieldset>
+</form>
+</div>
+<div class="bottomnav" id="bn">
+  <a href="../Pranav/contactus.html">Contact Us</a>
+  <a href="../Pranav/FAQ.html">FAQ</a>
+</div>
+</body>
+<script language="Javascript">
+function cals() {
+  function find(id) { return document.getElementById(id) }
+
+  var step = find("step").value
+  var age = find("age").value
+  var height = find("height").value
+  var weight = find("weight").value
+  var speed = find("speed").value
+  var result = 0
+  if (find("male").checked) 
+    result = [66.47 + (13.75 * weight) + (5.0 * height - (6.75 * age))]*speed*step*1.13/100000
+  else if (find("female").checked)
+    result = [665.09 + (9.56 * weight) + (1.84 * height - (4.67 * age))]*speed*step*1.13/100000
+  find("calories").innerHTML =  result 
+}
+cals()
+</script>
+</html>

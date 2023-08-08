@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Exercises</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+    h2
+    { 
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 250%;
+        text-shadow: 2px 2px rgb(128, 126, 123);
+    }
+    p{
+        text-align: justify;
+    }
+    body{background-color: peachpuff;}
+    .container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.btns{
+    border-color: brown;
+    font-size: 15px; margin-left: 1%;
+    background-color: orange;
+    border-radius: 9px;
+    padding:1%;
+}
+
+.text {
+    font-size: 20px;
+    padding-left: 2%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+}
+</style>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    window.onscroll = function() {myFunction1()};
+    var myTopnav = document.getElementById("myTopnav");
+    var sticky = myTopnav.offsetTop;
+    
+    function myFunction1() {
+      if (window.pageYOffset >= sticky) {
+        myTopnav.classList.add("sticky")
+      } else {
+        myTopnav.classList.remove("sticky");
+      }
+    }
+</script>
+<link rel="stylesheet" href="navstyle.css">
+    <body>
+        <h1 style="text-align: center;font-style: oblique;font-family: 'Franklin Gothic Medium';">Fitness1st</h1>
+    <div class="topnav" id="myTopnav">
+    <a href="../Pranav/review2_homepage.html">Home</a>
+    <a href="../Niranjan/FDCMP.html" >Food</a>
+    <a href="../Priya/1.Page1.html" class="active">Workout</a>
+    <div class="dropdown">
+        <button class="dropbtn">Fitness Calculator 
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="../Bhuvi/bmi.html">BMI Calculator</a>
+            <a href="../Bhuvi/bmr.html">Steps to Calories</a>
+            <a href="../Bhuvi/cal.html">Body Metabolism Calculator</a>
+            <a href='../Niranjan/Calories.php'>Calorie Calculator</a>
+        </div>
+    </div> 
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <a href="../Vignesh/myinfo.php">Profile</a>
+    <a href="../Pranav/Forum/login.php">Forum</a>
+    <a href="../Vignesh/login.php" >Login</a>
+    </div>
+    <br><br>
+        <h2>Exercise Suggestions</h2>
+        <h4 align="center">Please fill in all the necessary details below</h4>
+        <form name="f1" method="POST" action="5.1.suggestions.php" style="padding-left:2%" enctype="multipart/form-data">
+            <p>Name:
+                <input type="text" name="NAME" id="NAME" required>
+            </p>
+            <p>Age:
+                <input type="number" name="AGE" id="AGE" required>
+            </p>
+            <p>Phone number:
+                <input type="number" name="PHNO" id="PHNO" required>
+            </p>
+            <p>MailID:
+                <input type="text" name="MAIL" id="MAIL" required>
+            </p>
+            <p>Company name:
+                <input type="text" name="COMP" id="COMP" required>
+            </p>
+            <p>Suggested exercise name:
+                <input type="text" name="EXNAME" id="EXNAME" required>
+            </p>
+            <p>Category (Yoga/Cardio/Strength Training):
+                <input type="text" name="CAT" id="CAT" required>
+            </p>
+            <p>Benefits and steps to perform the exercise (kindly upload a txt file):
+                <input type="file" name="f2" id="f2" required>
+            </p>
+            <p>Proof:
+                <input type="file" id="imageFile" accept="image/*" name="f1" required>
+            </p>
+            <input type="submit" value="submit" class="btns">
+        </form>
+        <form name="fe">
+            <p style="text-align: right;">
+            <a href="3.0.Exercises.html"><input type="button" class="btns" value="Back"></a><br></p>
+        </form>
+        <div class="bottomnav" id="bn">
+            <a href="../Pranav/contactus.html">Contact Us</a>
+            <a href="../Pranav/FAQ.html">FAQ</a>
+        </div>
+    </body>
+</html>

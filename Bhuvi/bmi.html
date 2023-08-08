@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BMI Calculator</title>
+</head>
+<style>
+    fieldset {
+    width: 300px;
+    margin: 25px 0 0 50px;
+    border: 1px;
+    border-style: solid;
+    border-color: brown;
+    box-shadow: 1px 1px #cccccc;
+    padding: 10px;
+    background: #ffd580;
+    }
+    
+    label {
+    float: left;
+    width: 140px;
+    display: block;
+    clear: left;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    }
+    
+    button {
+    margin-left: 150px;
+    }
+    
+    input {
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+    width: 128px;
+    }
+    
+    #bmi_label {
+    width: 200px;
+    }
+    
+    #bmi {
+    width: 66px;
+    }
+    h4{
+        box-shadow: 1px 1px 1px lightcoral;
+        background-color: #f4a460;
+        border-radius: .75rem 25px 5% 3em;
+        padding: 1rem;
+        text-align: left;
+    }
+    #intro {
+    width: 300px;
+    margin: 25px 0 0 50px;
+    padding: 10px;
+    border: 1px;
+    border-style: solid;
+    border-color: brown;
+    text-transform: uppercase;
+      border-radius: 15px 50px;
+      box-shadow: 3px 3px #ffe3b9;
+      background: #ffa500;
+      padding: 20px; 
+      width: 200px;
+      height: 100px; 
+    }
+    .btns{
+    border-color: brown;
+    margin-left: 1%;
+    background-color: orange;
+    border-radius: 9px;
+    padding:2%;
+    }
+    #divs
+    {
+        background-color:  rgb(255, 165, 0);
+        height:60%;
+        width:22%;
+        border: 5px double rgb(165,42,42);
+        padding-right: 4%;
+        padding-bottom: 2.5%;
+        margin: 20px;
+        border-radius: 25px;
+}
+h2
+    { 
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 250%;
+        text-shadow: 2px 2px rgb(128, 126, 123);
+    }
+.column {
+  float: center;
+  width: 33.33%;
+  padding: 5px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(209, 89, 46);
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .active {
+    background-color:brown;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #dfa130;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(105, 64, 27);
+    color:chocolate;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: brown;
+    color: rgb(255, 255, 255);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  
+  .bottomnav {
+    overflow:auto;
+    background-color:rgb(199, 80, 36);
+    color: #ffffff;
+    width: auto;
+    position:static;
+    bottom: 0%;
+    text-align: center;
+    
+  }
+  
+  
+  .bottomnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    font-variant: small-caps;
+    opacity: 100%;
+    
+  }
+  
+  .bottomnav a:hover {
+    background-color: rgb(105, 64, 27);;
+    color: chocolate;
+  }
+  
+  .bottomnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+</style>
+<script>
+    function BMI(a,b) 
+    {
+        var wts=parseInt(a);
+        var hts=parseInt(b);
+        var bmival=parseInt((wts*10000)/(hts*hts));
+        document.getElementById("bmi_val").value=bmival;
+        if(bmival<18.5)
+        {
+            document.getElementById("ans").innerHTML="Your BMI category: UNDERWEIGHT";
+        }
+        else if(bmival>18.5 && bmival<24.9)
+        {
+            document.getElementById("ans").innerHTML="Your BMI category: NORMAL WEIGHT";
+        }
+        else if(bmival>24.9 && bmival<29.9)
+        {
+            document.getElementById("ans").innerHTML="Your BMI category: OVERWEIGHT";
+        }
+        else if(bmival>29.9 && bmival<34.9)
+        {
+            document.getElementById("ans").innerHTML="Your BMI category: OBESITY CLASS 1";
+        }
+        else if(bmival>34.9 && bmival<39.9)
+        {
+            document.getElementById("ans").innerHTML="Your BMI category: OBESITY CLASS 2";
+        }
+        else if(bmival>39.9)
+        {
+            document.getElementById("ans").innerHTML="Your BMI category: OBESITY CLASS 3";
+        }
+    } 
+</script>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    window.onscroll = function() {myFunction1()};
+    var myTopnav = document.getElementById("myTopnav");
+    var sticky = myTopnav.offsetTop;
+    
+    function myFunction1() {
+      if (window.pageYOffset >= sticky) {
+        myTopnav.classList.add("sticky")
+      } else {
+        myTopnav.classList.remove("sticky");
+      }
+    }
+</script>
+<link rel="stylesheet" href="navstyle.css">
+<body style="background-color:peachpuff;">
+    <h1 style="text-align: center;font-style: oblique;font-family: 'Franklin Gothic Medium';">Fitness1st</h1>
+    <div class="topnav" id="myTopnav">
+    <a href="../Pranav/review2_homepage.html">Home</a>
+    <a href="../Niranjan/FDCMP.html" >Food</a>
+    <a href="../Priya/1.Page1.html">Workout</a>
+    <div class="dropdown">
+        <button class="dropbtn">Fitness Calculator 
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="../Bhuvi/bmi.html" class="active">BMI Calculator</a>
+            <a href="../Bhuvi/bmr.html">Steps to Calories</a>
+            <a href="../Bhuvi/cal.html">Body Metabolism Calculator</a>
+            <a href='../Niranjan/Calories.php'>Calorie Calculator</a>
+        </div>
+    </div> 
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    <a href="../Vignesh/myinfo.php">Profile</a>
+    <a href="../Pranav/Forum/login.php">Forum</a>
+    <a href="../Vignesh/login.php" >Login</a>
+    </div>
+    <br><br>
+<center>
+<h2>BMI CALCULATOR PAGE</h2>
+<h4><center style="text-transform: uppercase;">Calculate the BMI (body mass index) value by using the configuration below.</center></h4>
+<span style = "float:left; margin-top:100px; height: 600px; width: 500px">
+<img src="https://cdn1.vectorstock.com/i/1000x1000/42/05/man-bmi-body-mass-index-infographics-for-male-vector-37634205.jpg" style="width:400px;height:300px;">
+</span>
+</span>
+<span style = "float:right; margin-top:100px; height: 600px; width: 500px">
+<img src="https://www.nitrocut.com/wp-content/uploads/2018/09/Benefits-of-the-BMI-Calculator-for-People-of-all-Ages.jpg" style="width:400px;height:300px;">
+</span>
+<script>
+    //AJAX
+    function ajaxCall() 
+    { 
+        //alert("Entered ajax");
+        //var Duration=document.getElementsByName("Duration").value;
+        var xh = new XMLHttpRequest(); 
+        var name=document.getElementById("N").value;
+        xh.onreadystatechange = function() 
+        { 
+            if (this.readyState == 4 && this.status == 200) 
+            { 
+                document.getElementById("bmi_val").value=this.responseText;
+                document.getElementById("age").value="Obtained from database";
+                document.getElementById("wt").value="Obtained from database";
+                document.getElementById("ht").value="Obtained from database";
+            } 
+        }; 
+    xh.open("POST","try.php",true); 
+    xh.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    xh.send("NAME="+name); 
+    }
+</script>
+    <div id="divs">
+    <form name="f1" method="POST" action="try.php">
+    <fieldset>
+        <legend><b>HEIGHT AND WEIGHT</b></legend>
+        <label>Name of the person: </label>
+        <input type="text" id="N" name="NAME">
+        <br>
+        <label>Age of the person: </label>
+        <input type="text" id="age">
+        <br>
+        <label>Weight (Kilograms): </label>
+        <input type="text" id="wt">
+        <br>
+        <label>Height (Centimetres): </label>
+        <input type="text" id="ht">
+        <br>
+        <input type="button" class="btns" value="Calculate your BMI" onclick="BMI(document.f1.wt.value,document.f1.ht.value)">
+        <input type="button" class="btns" style="text-align: center;" value="Fetch Details" onclick="ajaxCall()">
+    </fieldset>
+</form>
+        
+</div>
+<div id="divs">
+    <fieldset>
+        <legend><b>BMI</b></legend>
+        <label for="bmi" id="bmi_label" style="text-align: center;">The Calculated BMI is:</label>
+        <input type="text" id="bmi_val">
+    </fieldset>
+</div>
+</form>
+</center>
+<center>
+<b><div id="ans" style="font-size: larger; background-color: orange;"></div></b>
+<h3 style="text-transform: uppercase;"><u>BMI Category Table</u></h3>
+<img id="bmi_table" class="column" src="https://images.theconversation.com/files/349366/original/file-20200724-25-osy3a3.PNG?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip" alt="BMI" width="500" height="250">
+<h3 style="text-transform: uppercase;"><u>BMI Variation Graph</u></h3>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<canvas id="myChart" class="column" style="width:100%;max-width:600px;background-color:white"></canvas>
+<script>
+
+var xValues = ["Jan", "Feb", "Mar", "Apr", "May", "June", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]; //Moths
+var yValues = [26,25.4,25,25.2,24.9,25.7,24,23.3,23.1,22.8,22,22.3,21.8]; //BMI
+
+new Chart("myChart", {
+    axisX: {
+        title: "Months",
+        titleFontFamily: "comic sans ms"
+      },
+      axisY: {
+        title: "BMI value change for an average person after workout",
+        titleFontFamily: "comic sans ms"
+      },
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 0, max:30}}],
+    }
+  }
+});
+</script>
+</center>
+<div class="bottomnav" id="bn">
+    <a href="../Pranav/contactus.html">Contact Us</a>
+    <a href="../Pranav/FAQ.html">FAQ</a>
+</div>
+</body>
+
+</html>
